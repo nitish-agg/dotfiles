@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv ssh-agent)
+plugins=(git gitfast last-working-dir common-aliases history-substring-search pyenv ssh-agent)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -68,8 +68,30 @@ export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR=codeexport BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init --path)"
-fiexport BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init --path)"
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+export openai_api='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'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/Users/nitish/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/nitish/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/Users/nitish/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/nitish/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
+
+alias francinette=/Users/nitish/francinette/tester.sh
+
+alias paco=/Users/nitish/francinette/tester.sh
+eval "$(direnv hook zsh)"
